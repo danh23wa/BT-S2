@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");
   const [matKhau, setMatKhau] = useState("");
-  
+  const navigate = useNavigate ();
 
 
   return (
@@ -36,11 +37,14 @@ const LoginForm: React.FC = () => {
           className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
       </div>
-      {/* Debug hiển thị giá trị nhập */}
-      <div className="text-sm text-gray-500">
-        Bạn nhập: {username} - {matKhau}
-      </div>
 
+<button
+        id="btnLogin"
+        onClick={handleLogin}
+        className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
+      >
+        đăng nhập
+      </button>
     </div>
   );
 };
