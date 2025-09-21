@@ -3,6 +3,9 @@ import React, { useState } from "react";
 const LoginForm: React.FC = () => {
   const [username, setUsername] = useState("");
   const [matKhau, setMatKhau] = useState("");
+  
+
+
   return (
     <div className="flex flex-col gap-4 w-64">
       {/* Username */}
@@ -32,6 +35,10 @@ const LoginForm: React.FC = () => {
           placeholder="Nhập mật khẩu"
           className="border rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
+      </div>
+      {/* Debug hiển thị giá trị nhập */}
+      <div className="text-sm text-gray-500">
+        Bạn nhập: {username} - {matKhau}
       </div>
 
     </div>
