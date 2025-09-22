@@ -6,7 +6,14 @@ const LoginForm: React.FC = () => {
   const [matKhau, setMatKhau] = useState("");
   const navigate = useNavigate ();
 
-
+  const handleLogin = () => {
+    if (username === "user" && matKhau === "password") {
+      navigate("/home");
+    } else {
+      alert("Sai tài khoản hoặc mật khẩu!");
+    }
+  };
+  
   return (
     <div className="flex flex-col gap-4 w-64">
       {/* Username */}
