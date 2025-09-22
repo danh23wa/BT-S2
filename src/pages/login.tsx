@@ -1,19 +1,26 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Login: React.FC = () => {
   const [username, setUsername] = useState("");
   const [matKhau, setMatKhau] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = () => {
-    alert(`Username: ${username} | Mật khẩu: ${matKhau}`);
+    if (username === "admin" && matKhau === "admin") {
+      navigate("/home");
+    } else {
+      alert("Sai tài khoản hoặc mật khẩu!");
+    }
   };
 
   return (
     <div className="flex flex-col gap-4 w-64">
       {/* Username */}
       <div className="flex flex-col gap-2">
-        <label htmlFor="txtUsername" className="text-sm font-medium text-gray-700">
-          Tên đăng nhập 
+        <label htmlFor="txtUsername" className="text-sm font-medium text-gray-700"
+        style={{ margin: "10px" }}>
+          Tên đăng nhập
         </label>
         <input
           id="txtUsername"
@@ -27,7 +34,8 @@ const Login: React.FC = () => {
 
       {/* Mật khẩu */}
       <div className="flex flex-col gap-2">
-        <label htmlFor="txtMatKhau" className="text-sm font-medium text-gray-700">
+        <label htmlFor="txtMatKhau" className="text-sm font-medium text-gray-700"
+        style={{ margin: "10px" }}>
           Mật khẩu
         </label>
         <input
@@ -46,7 +54,7 @@ const Login: React.FC = () => {
         onClick={handleLogin}
         className="bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition"
       >
-        đăng nhập
+        Đăng nhập
       </button>
     </div>
   );

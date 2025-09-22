@@ -1,11 +1,14 @@
+import { Routes, Route } from "react-router-dom";
 import Login from "./pages/login";
 import './App.css';
+import Home from "./pages/home";
 
 function App() {
   return (
-    <div className="p-6">
-      <Login />
-    </div>
+    <Routes>
+      <Route path="/" element={<Login />} />
+      <Route path="/home" element={<Home />} />
+    </Routes>
   );
 }
 
