@@ -8,7 +8,7 @@ const LoginForm: React.FC = () => {
       {/* Username */}
       <div className="flex flex-col gap-2">
         <label htmlFor="txtUsername" className="text-sm font-medium text-gray-700">
-          Username
+          tên đăng nhập 
         </label>
         <input
           id="txtUsername"
@@ -22,7 +22,7 @@ const LoginForm: React.FC = () => {
            {/* Mật khẩu */}
            <div className="flex flex-col gap-2">
         <label htmlFor="txtMatKhau" className="text-sm font-medium text-gray-700">
-          Mật khẩu
+          mật khẩu 
         </label>
         <input
           id="txtMatKhau"
