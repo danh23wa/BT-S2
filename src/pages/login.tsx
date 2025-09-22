@@ -13,7 +13,7 @@ const Login: React.FC = () => {
       {/* Username */}
       <div className="flex flex-col gap-2">
         <label htmlFor="txtUsername" className="text-sm font-medium text-gray-700">
-          Username
+          Tên đăng nhập 
         </label>
         <input
           id="txtUsername"
@@ -28,7 +28,7 @@ const Login: React.FC = () => {
       {/* Mật khẩu */}
       <div className="flex flex-col gap-2">
         <label htmlFor="txtMatKhau" className="text-sm font-medium text-gray-700">
-          Password
+          Mật khẩu
         </label>
         <input
           id="txtPassword"
